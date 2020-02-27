@@ -54,6 +54,10 @@
   <time datetime="2020-02-22T15:24:13.000Z" itemprop="datePublished">2020-02-22</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a> / <a class="article-category-link" href="/categories/LeetCode/Contest/">Contest</a>
+  </div>
+
       
       
 <div class="word_count">
@@ -61,7 +65,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">786字</span>
+            <span class="post-count">794字</span>
         </span>
     </span>
 
@@ -96,7 +100,10 @@
       
 
       
-      <h1 id="LeetCode-BiWeekly-Contest20"><a href="#LeetCode-BiWeekly-Contest20" class="headerlink" title="LeetCode BiWeekly Contest20"></a>LeetCode BiWeekly Contest20</h1><h2 id="A-Sort-Integers-by-The-Number-of-1-Bits"><a href="#A-Sort-Integers-by-The-Number-of-1-Bits" class="headerlink" title="[A] Sort Integers by The Number of 1 Bits"></a>[A] Sort Integers by The Number of 1 Bits</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>排序：先按数字2进制中1的位数从小到大排序，如果位数相同则按大小顺序排序。</p>
+      <h1 id="LeetCode-BiWeekly-Contest20"><a href="#LeetCode-BiWeekly-Contest20" class="headerlink" title="LeetCode BiWeekly Contest20"></a>LeetCode BiWeekly Contest20</h1><p><strong>LeetCode 双周赛20，难度简单</strong></p>
+<a id="more"></a>
+
+<h2 id="A-Sort-Integers-by-The-Number-of-1-Bits"><a href="#A-Sort-Integers-by-The-Number-of-1-Bits" class="headerlink" title="[A] Sort Integers by The Number of 1 Bits"></a>[A] Sort Integers by The Number of 1 Bits</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>排序：先按数字2进制中1的位数从小到大排序，如果位数相同则按大小顺序排序。</p>
 <h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>将数字进行二进制解析，解析后进行二维数组的排序即可</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] sortByBits(<span class="keyword">int</span>[] arr) &#123;</span><br><span class="line">    	<span class="keyword">int</span> len = arr.length;</span><br><span class="line">    	<span class="keyword">int</span>[][] fn = <span class="keyword">new</span> <span class="keyword">int</span>[len][<span class="number">2</span>];</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> idx=<span class="number">0</span>;idx&lt;len;idx++) &#123;</span><br><span class="line">    		<span class="keyword">int</span> x = arr[idx];</span><br><span class="line">    		fn[idx][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    		fn[idx][<span class="number">1</span>] = x;</span><br><span class="line">    		<span class="keyword">while</span> (x &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    			fn[idx][<span class="number">0</span>] += x % <span class="number">2</span>;</span><br><span class="line">    			x = x &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	Arrays.sort(fn, <span class="keyword">new</span> Comparator&lt;<span class="keyword">int</span>[]&gt;() &#123;</span><br><span class="line">    		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span>[] o1, <span class="keyword">int</span>[] o2)</span> </span>&#123;</span><br><span class="line">    			<span class="keyword">if</span> (o1[<span class="number">0</span>] == o2[<span class="number">0</span>]) <span class="keyword">return</span> o1[<span class="number">1</span>] - o2[<span class="number">1</span>];</span><br><span class="line">    			<span class="keyword">return</span> o1[<span class="number">0</span>] - o2[<span class="number">0</span>];</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;);</span><br><span class="line">    	<span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> idx=<span class="number">0</span>;idx&lt;len;idx++) &#123;</span><br><span class="line">    		res[idx] = fn[idx][<span class="number">1</span>];</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -123,7 +130,7 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Contest/" rel="tag">Contest</a></li></ul>
 
 
     </footer>
@@ -144,9 +151,9 @@
       </a>
     
     
-      <a href="/2020/02/16/LeetCode-176/" class="article-nav-link">
+      <a href="/2020/02/16/LeetCodeWeeklyContest176/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">LeetCode_176</div>
+        <div class="article-nav-title">LeetCodeWeeklyContest176</div>
       </a>
     
   </nav>
@@ -270,7 +277,11 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2020/02/10/About">关于我</a>
+      <a class="nav-item-link" href="/aboutme/index.html">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/website/index.html">外链站点</a>
     </li>
     
   </ul>

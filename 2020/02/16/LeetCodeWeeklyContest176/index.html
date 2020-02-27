@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    LeetCode_176 |  Bugxyb 的闲话时间
+    LeetCodeWeeklyContest176 |  Bugxyb 的闲话时间
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -33,7 +33,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-LeetCode-176" class="article article-type-post" itemscope
+  <article id="post-LeetCodeWeeklyContest176" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -41,7 +41,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  LeetCode_176
+  LeetCodeWeeklyContest176
 </h1>
   
 
@@ -50,10 +50,14 @@
 
     
     <div class="article-meta">
-      <a href="/2020/02/16/LeetCode-176/" class="article-date">
+      <a href="/2020/02/16/LeetCodeWeeklyContest176/" class="article-date">
   <time datetime="2020-02-16T03:28:55.000Z" itemprop="datePublished">2020-02-16</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a> / <a class="article-category-link" href="/categories/LeetCode/Contest/">Contest</a>
+  </div>
+
       
       
 <div class="word_count">
@@ -61,7 +65,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">741字</span>
+            <span class="post-count">744字</span>
         </span>
     </span>
 
@@ -96,7 +100,10 @@
       
 
       
-      <h1 id="LeetCode-Weekly-Contest-176"><a href="#LeetCode-Weekly-Contest-176" class="headerlink" title="LeetCode Weekly Contest 176"></a>LeetCode Weekly Contest 176</h1><h2 id="A-Count-Negative-Numbers-in-a-Sorted-Matrix"><a href="#A-Count-Negative-Numbers-in-a-Sorted-Matrix" class="headerlink" title="[A] Count Negative Numbers in a Sorted Matrix"></a>[A] Count Negative Numbers in a Sorted Matrix</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>统计非递增矩阵中的非负数</p>
+      <h1 id="LeetCode-Weekly-Contest-176"><a href="#LeetCode-Weekly-Contest-176" class="headerlink" title="LeetCode Weekly Contest 176"></a>LeetCode Weekly Contest 176</h1><p><strong>LeetCode 周赛176 难度适中</strong></p>
+<a id="more"></a>
+
+<h2 id="A-Count-Negative-Numbers-in-a-Sorted-Matrix"><a href="#A-Count-Negative-Numbers-in-a-Sorted-Matrix" class="headerlink" title="[A] Count Negative Numbers in a Sorted Matrix"></a>[A] Count Negative Numbers in a Sorted Matrix</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>统计非递增矩阵中的非负数</p>
 <h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>数据量小，可以O(nm)复杂度暴力解决；从右上角统计，可以做到O(n+m)的线性复杂度；</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">None</span><br></pre></td></tr></table></figure>
 
@@ -111,7 +118,7 @@
 <h2 id="D-Construct-Target-Array-With-Multiple-Sums"><a href="#D-Construct-Target-Array-With-Multiple-Sums" class="headerlink" title="[D] Construct Target Array With Multiple Sums"></a>[D] Construct Target Array With Multiple Sums</h2><h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p>给你全是1的List，每次只能进行求和，然后替代其中的一个数，问你能不能达到目标对应的List</p>
 <h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><p>倒推思想：每次求和之后的数都是List中最大的一个数，可以从最后目标List开始，选择最大的一个数，然后倒推，直到全是1为止</p>
 <h3 id="源代码-1"><a href="#源代码-1" class="headerlink" title="源代码"></a>源代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> Comparator&lt;Integer&gt; cmp = <span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> o2 - o1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPossible</span><span class="params">(<span class="keyword">int</span>[] target)</span> </span>&#123;</span><br><span class="line">        Queue&lt;Integer&gt; pq = <span class="keyword">new</span> PriorityQueue&lt;Integer&gt;(cmp);</span><br><span class="line">        <span class="keyword">int</span> count_sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;target.length;i++) &#123;</span><br><span class="line">        	pq.add(target[i]);</span><br><span class="line">        	count_sum += target[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(! pq.isEmpty()) &#123;</span><br><span class="line">        	<span class="keyword">int</span> num = pq.poll();</span><br><span class="line">        	<span class="keyword">if</span> (num == <span class="number">1</span>)&#123;</span><br><span class="line">        		<span class="keyword">break</span>;</span><br><span class="line">        	&#125;</span><br><span class="line">        	<span class="keyword">int</span> tar = num - (count_sum - num);</span><br><span class="line">        	System.out.println(num+<span class="string">":"</span>+count_sum+<span class="string">":"</span>+tar);</span><br><span class="line">        	<span class="keyword">if</span> ((tar &lt;=<span class="number">0</span>) || (count_sum == num))&#123;</span><br><span class="line">        		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        	&#125;</span><br><span class="line">        	pq.add(tar);</span><br><span class="line">        	count_sum = count_sum - num + tar;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="整体总结"><a href="#整体总结" class="headerlink" title="整体总结"></a>整体总结</h2><p>难度适中，B存在陷阱，不能暴力破解。当前完成时间是0:56:29 + (5:00 *2)，可以提升到（0：45：00 + 5：00）情况<br>下周继续努力</p>
+<h2 id="整体总结"><a href="#整体总结" class="headerlink" title="整体总结"></a>整体总结</h2><p>B存在陷阱，不能暴力破解。当前完成时间是0:56:29 + (5:00 *2)，可以提升到（0：45：00 + 5：00）情况<br>下周继续努力</p>
 
       
       <!-- reward -->
@@ -122,7 +129,7 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Contest/" rel="tag">Contest</a></li></ul>
 
 
     </footer>
@@ -142,11 +149,6 @@
         </div>
       </a>
     
-    
-      <a href="/2020/02/10/About/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">About</div>
-      </a>
     
   </nav>
 
@@ -269,7 +271,11 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2020/02/10/About">关于我</a>
+      <a class="nav-item-link" href="/aboutme/index.html">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/website/index.html">外链站点</a>
     </li>
     
   </ul>
