@@ -62,15 +62,21 @@
       <h1 id="My-Setup"><a href="#My-Setup" class="headerlink" title="My Setup"></a>My Setup</h1><p>常用的终端配置，主要是部署在Mac上，后面陆续升级部署到Linux的开发机上</p>
 <h2 id="Third-Party-Fonts"><a href="#Third-Party-Fonts" class="headerlink" title="Third-Party Fonts"></a>Third-Party Fonts</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">***MAC***</span><br><span class="line">brew tap homebrew/cask-fonts</span><br><span class="line"><span class="comment">#hack-nerd-font</span></span><br><span class="line">brew cask install font-hack-nerd-font</span><br><span class="line"><span class="comment">#Inconsolata</span></span><br><span class="line">brew cask install font-inconsolata</span><br></pre></td></tr></table></figure>
 
-<h2 id="MySetup"><a href="#MySetup" class="headerlink" title="MySetup"></a><a href="https://github.com/Bugxyb/MySetup" target="_blank" rel="noopener">MySetup</a></h2><h3 id="ZSH-oh-my-zsh"><a href="#ZSH-oh-my-zsh" class="headerlink" title="ZSH (oh-my-zsh)"></a>ZSH (oh-my-zsh)</h3><h4 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">***MAC***</span><br><span class="line">brew install zsh</span><br><span class="line">brew install zplug</span><br></pre></td></tr></table></figure>
+<h2 id="MySetup"><a href="#MySetup" class="headerlink" title="MySetup"></a><a href="https://github.com/Bugxyb/MySetup" target="_blank" rel="noopener">MySetup</a></h2><h3 id="ZSH-oh-my-zsh"><a href="#ZSH-oh-my-zsh" class="headerlink" title="ZSH (oh-my-zsh)"></a>ZSH (oh-my-zsh)</h3><p><a href="https://ohmyz.sh" target="_blank" rel="noopener">Oh-My-ZSH</a></p>
+<h4 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">***MAC***</span><br><span class="line">brew install zsh</span><br><span class="line">brew install zplug</span><br></pre></td></tr></table></figure>
 
-<h3 id="Ranger"><a href="#Ranger" class="headerlink" title="Ranger"></a>Ranger</h3><h3 id="FZF"><a href="#FZF" class="headerlink" title="FZF"></a>FZF</h3><ul>
-<li>FZF For Ranger (NoImplement)</li>
-<li>FZF For Vim (NoImplement)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">***MAC***</span><br><span class="line">brew install fzf</span><br><span class="line">$(brew --prefix)/opt/fzf/install</span><br></pre></td></tr></table></figure>
+<h3 id="Ranger"><a href="#Ranger" class="headerlink" title="Ranger"></a>Ranger</h3><p><a href="/2020/03/16/2020-03-16-Ranger/index.html">Ranger</a> A VIM-inspired filemanager for the console</p>
+<h4 id="Install-1"><a href="#Install-1" class="headerlink" title="Install"></a>Install</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">***MAC***</span><br><span class="line">pip3 install ranger</span><br></pre></td></tr></table></figure>
+
+<h3 id="FZF"><a href="#FZF" class="headerlink" title="FZF"></a>FZF</h3><p><a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener">FZF</a> A command-line fuzzy finder</p>
+<ul>
+<li>FZF For Ranger</li>
+<li>FZF For Vim (NoImplement)<h4 id="Install-2"><a href="#Install-2" class="headerlink" title="Install"></a>Install</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">***MAC***</span><br><span class="line">brew install fzf</span><br><span class="line">$(brew --prefix)/opt/fzf/install</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h3 id="VIM-neovim"><a href="#VIM-neovim" class="headerlink" title="VIM(neovim)"></a>VIM(neovim)</h3>
+<h3 id="VIM-neovim"><a href="#VIM-neovim" class="headerlink" title="VIM(neovim)"></a>VIM(neovim)</h3><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">***the_silver_searcher***</span><br><span class="line">brew install the_silver_searcher</span><br><span class="line">***autojump***</span><br><span class="line">brew install autojump</span><br></pre></td></tr></table></figure>
+
       
       <!-- reward -->
       
@@ -205,10 +211,6 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/mySetup/index.html">我的配置</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/repo/index.html">工具仓库</a>
     </li>
     
     <li class="nav-item">
