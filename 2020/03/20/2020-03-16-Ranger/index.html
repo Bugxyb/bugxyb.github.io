@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Ranger |  Bugxyb 的闲话时间
+    2020-03-16-Ranger |  Bugxyb 的闲话时间
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -41,7 +41,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Ranger
+  2020-03-16-Ranger
 </h1>
   
 
@@ -50,14 +50,10 @@
 
     
     <div class="article-meta">
-      <a href="/2020/03/16/2020-03-16-Ranger/" class="article-date">
-  <time datetime="2020-03-15T17:12:36.000Z" itemprop="datePublished">2020-03-16</time>
+      <a href="/2020/03/20/2020-03-16-Ranger/" class="article-date">
+  <time datetime="2020-03-19T19:14:28.320Z" itemprop="datePublished">2020-03-20</time>
 </a>
       
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Tools/">Tools</a>
-  </div>
-
       
       
 <div class="word_count">
@@ -65,7 +61,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">680字</span>
+            <span class="post-count">691字</span>
         </span>
     </span>
 
@@ -100,7 +96,12 @@
       
 
       
-      <h1 id="聊聊Ranger"><a href="#聊聊Ranger" class="headerlink" title="聊聊Ranger"></a>聊聊Ranger</h1><p><img src="/images/Ranger.png" alt=""></p>
+      <hr>
+<p>title: Ranger<br>date: 2020-03-16 01:12:36<br>tags:</p>
+<ul>
+<li>Setup<br>categories:</li>
+<li>[Tools]<br>#—<h1 id="聊聊Ranger"><a href="#聊聊Ranger" class="headerlink" title="聊聊Ranger"></a>聊聊Ranger</h1><img src="/images/Ranger.png" alt=""></li>
+</ul>
 <ul>
 <li><a href="https://ranger.github.io" target="_blank" rel="noopener">Ranger/Ranger</a></li>
 <li>Video For Ranger<ul>
@@ -114,6 +115,7 @@
 </li>
 </ul>
 <h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">***(Pip Recommend)***</span><br><span class="line">pip3 install ranger-fm</span><br><span class="line">***HomeBrew***</span><br><span class="line">brew install ranger</span><br></pre></td></tr></table></figure>
+
 <h2 id="FileConf"><a href="#FileConf" class="headerlink" title="FileConf"></a>FileConf</h2><ul>
 <li>ranger/colorschemes<ul>
 <li>Ranger颜色主题文件</li>
@@ -141,14 +143,18 @@
 </ul>
 </li>
 <li>ranger/scope.sh<ul>
-<li>预留配置<h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h2>Preview是Ranger的核心了，在文件./config/ranger/scope.sh中设置预览/打开文件等操作。<h3 id="Contents"><a href="#Contents" class="headerlink" title="Contents"></a>Contents</h3></li>
+<li>预留配置</li>
 </ul>
 </li>
+</ul>
+<h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h2><p>Preview是Ranger的核心了，在文件./config/ranger/scope.sh中设置预览/打开文件等操作。</p>
+<h3 id="Contents"><a href="#Contents" class="headerlink" title="Contents"></a>Contents</h3><ul>
 <li><a href="https://github.com/ranger/ranger/wiki/Image-Previews" target="_blank" rel="noopener">Image Preview</a></li>
-<li><a href="https://github.com/ranger/ranger/wiki/Video-Previews" target="_blank" rel="noopener">Video Preview</a><h3 id="For-Image-Preview"><a href="#For-Image-Preview" class="headerlink" title="For Image Preview"></a>For Image Preview</h3>Image Preview 参考Mac下使用的是<a href="https://www.iterm2.com/documentation-images.html" target="_blank" rel="noopener">iTerm2 Imgcat</a>功能,<br>通过协议和B64编码将图片显示在终端下。<br>图片较大，产生的B64编码较长，导致image_decode截取失败，无法显示图片。<br>建议魔改Ranger的Imgcat代码，将图片进行缩小后再显示<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/usr/local/lib/python3.7/site-packages/ranger/ext/img_display.py</span></span><br><span class="line"><span class="meta">@staticmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_encode_image_content</span><span class="params">(path)</span>:</span></span><br><span class="line"><span class="string">"""Read and encode the contents of path"""</span></span><br><span class="line">    <span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">    <span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line">    image = Image.open(path).convert(<span class="string">'RGB'</span>)</span><br><span class="line">    (x, y) = image.size</span><br><span class="line">    x_s, y_s = <span class="number">500</span>, int(<span class="number">500</span> * y / x)</span><br><span class="line">    image = image.resize((x_s, y_s), Image.ANTIALIAS)</span><br><span class="line">    io_buffer = BytesIO()</span><br><span class="line">    image.save(io_buffer, format=<span class="string">'JPEG'</span>)</span><br><span class="line">    <span class="keyword">return</span> base64.b64encode(io_buffer.getvalue()).decode(<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># with open(path, 'rb') as fobj:</span></span><br><span class="line">    <span class="comment">#    return base64.b64encode(fobj.read()).decode('utf-8')</span></span><br></pre></td></tr></table></figure>
-
-</li>
+<li><a href="https://github.com/ranger/ranger/wiki/Video-Previews" target="_blank" rel="noopener">Video Preview</a></li>
 </ul>
+<h3 id="For-Image-Preview"><a href="#For-Image-Preview" class="headerlink" title="For Image Preview"></a>For Image Preview</h3><p>Image Preview 参考Mac下使用的是<a href="https://www.iterm2.com/documentation-images.html" target="_blank" rel="noopener">iTerm2 Imgcat</a>功能,<br>通过协议和B64编码将图片显示在终端下。<br>图片较大，产生的B64编码较长，导致image_decode截取失败，无法显示图片。<br>建议魔改Ranger的Imgcat代码，将图片进行缩小后再显示</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/usr/local/lib/python3.7/site-packages/ranger/ext/img_display.py</span></span><br><span class="line"><span class="meta">@staticmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_encode_image_content</span><span class="params">(path)</span>:</span></span><br><span class="line"><span class="string">"""Read and encode the contents of path"""</span></span><br><span class="line">    <span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">    <span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line">    image = Image.open(path).convert(<span class="string">'RGB'</span>)</span><br><span class="line">    (x, y) = image.size</span><br><span class="line">    x_s, y_s = <span class="number">500</span>, int(<span class="number">500</span> * y / x)</span><br><span class="line">    image = image.resize((x_s, y_s), Image.ANTIALIAS)</span><br><span class="line">    io_buffer = BytesIO()</span><br><span class="line">    image.save(io_buffer, format=<span class="string">'JPEG'</span>)</span><br><span class="line">    <span class="keyword">return</span> base64.b64encode(io_buffer.getvalue()).decode(<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># with open(path, 'rb') as fobj:</span></span><br><span class="line">    <span class="comment">#    return base64.b64encode(fobj.read()).decode('utf-8')</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>现在比较常用的几个插件</p>
 <h3 id="Ranger-Devicons-Plugin"><a href="#Ranger-Devicons-Plugin" class="headerlink" title="Ranger Devicons Plugin"></a><a href="https://github.com/alexanderjeurissen/ranger_devicons" target="_blank" rel="noopener">Ranger Devicons Plugin</a></h3><ul>
 <li>Ranger的文件图标增强</li>
@@ -164,7 +170,9 @@
 <li>Ranger 压缩的工具</li>
 </ul>
 <h2 id="Ranger-Commands"><a href="#Ranger-Commands" class="headerlink" title="Ranger Commands"></a><a href="https://github.com/ranger/ranger/wiki/Custom-Commands" target="_blank" rel="noopener">Ranger Commands</a></h2><h3 id="Commands-full"><a href="#Commands-full" class="headerlink" title="Commands_full"></a>Commands_full</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:shell to run shell <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Complete-By-Python"><a href="#Complete-By-Python" class="headerlink" title="Complete By Python"></a>Complete By Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Any class that is a subclass of "Command" will be integrated into ranger as a</span></span><br><span class="line"><span class="comment"># command.  Try typing ":my_edit&lt;ENTER&gt;" in ranger!</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">my_edit</span><span class="params">(Command)</span>:</span></span><br><span class="line">    <span class="comment"># The so-called doc-string of the class will be visible in the built-in</span></span><br><span class="line">    <span class="comment"># help that is accessible by typing "?c" inside ranger.</span></span><br><span class="line">    <span class="string">""":my_edit &lt;filename&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    A sample command for demonstration purposes that opens a file in an editor.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># The execute method is called when you run this command in ranger.</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">execute</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># self.arg(1) is the first (space-separated) argument to the function.</span></span><br><span class="line">        <span class="comment"># This way you can write ":my_edit somefilename&lt;ENTER&gt;".</span></span><br><span class="line">        <span class="keyword">if</span> self.arg(<span class="number">1</span>):</span><br><span class="line">            <span class="comment"># self.rest(1) contains self.arg(1) and everything that follows</span></span><br><span class="line">            target_filename = self.rest(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment"># self.fm is a ranger.core.filemanager.FileManager object and gives</span></span><br><span class="line">            <span class="comment"># you access to internals of ranger.</span></span><br><span class="line">            <span class="comment"># self.fm.thisfile is a ranger.container.file.File object and is a</span></span><br><span class="line">            <span class="comment"># reference to the currently selected file.</span></span><br><span class="line">            target_filename = self.fm.thisfile.path</span><br><span class="line"></span><br><span class="line">        <span class="comment"># This is a generic function to print text in ranger.</span></span><br><span class="line">        self.fm.notify(<span class="string">"Let's edit the file "</span> + target_filename + <span class="string">"!"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Using bad=True in fm.notify allows you to print error messages:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(target_filename):</span><br><span class="line">            self.fm.notify(<span class="string">"The given file does not exist!"</span>, bad=<span class="literal">True</span>)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># This executes a function from ranger.core.acitons, a module with a</span></span><br><span class="line">        <span class="comment"># variety of subroutines that can help you construct commands.</span></span><br><span class="line">        <span class="comment"># Check out the source, or run "pydoc ranger.core.actions" for a list.</span></span><br><span class="line">        self.fm.edit_file(target_filename)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># The tab method is called when you press tab, and should return a list of</span></span><br><span class="line">    <span class="comment"># suggestions that the user will tab through.</span></span><br><span class="line">    <span class="comment"># tabnum is 1 for &lt;TAB&gt; and -1 for &lt;S-TAB&gt; by default</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tab</span><span class="params">(self, tabnum)</span>:</span></span><br><span class="line">        <span class="comment"># This is a generic tab-completion function that iterates through the</span></span><br><span class="line">        <span class="comment"># content of the current directory.</span></span><br><span class="line">        <span class="keyword">return</span> self._tab_directory_content()</span><br></pre></td></tr></table></figure>
+
 <h3 id="Commands-List"><a href="#Commands-List" class="headerlink" title="Commands List"></a>Commands List</h3><ul>
 <li>mkcd</li>
 <li>fzf_select</li>
@@ -181,8 +189,6 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Setup/" rel="tag">Setup</a></li></ul>
-
 
     </footer>
 
