@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="description" content="......" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    LeetCodeBiWeeklyContest22 |  Bugxyb 的闲话时间
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-2020-03-22-LeetCodeBiWeeklyContest22" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  LeetCodeBiWeeklyContest22
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/22/2020-03-22-LeetCodeBiWeeklyContest22/" class="article-date">
+  <time datetime="2020-03-21T16:48:55.000Z" itemprop="datePublished">2020-03-22</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Contest/">Contest</a>
+  </div>
+
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.1k字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">5分钟</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h1 id="LeetCode-BiWeekly-Contest22"><a href="#LeetCode-BiWeekly-Contest22" class="headerlink" title="LeetCode BiWeekly Contest22"></a>LeetCode BiWeekly Contest22</h1><p>最后一题很有难度，然而没在有效时间内做出来</p>
+<table>
+<thead>
+<tr>
+<th>Total</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/</td>
+<td>0:05:13</td>
+<td>0:22:55</td>
+<td>0:38:06</td>
+<td>/</td>
+</tr>
+</tbody></table>
+<p>最后一题想了很久，也许是和自己的状态相关吧。还是要多熟练熟练</p>
+<a id="more"></a>
+
+<h2 id="A-Find-the-Distance-Value-Between-Two-Arrays"><a href="#A-Find-the-Distance-Value-Between-Two-Arrays" class="headerlink" title="[A] Find the Distance Value Between Two Arrays"></a>[A] Find the Distance Value Between Two Arrays</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定两个数组，找出A数组中，所有和B中数字的绝对值大于D的个数</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>直接模拟即可</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h2 id="B-Cinema-Seat-Allocation"><a href="#B-Cinema-Seat-Allocation" class="headerlink" title="[B] Cinema Seat Allocation"></a>[B] Cinema Seat Allocation</h2><h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>电影院座位，一行10个位置，有几个座位被预留了，问最多可以做多少家庭（4个人，且343的不能只有一个人做一边）</p>
+<h3 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h3><p>扫描每一行，如果没有预留，则可以做2个家庭，然后再检查是否是可以2-2的坐，以及中间4个是否能坐即可</p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxNumberOfFamilies</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span>[][] reservedSeats)</span> </span>&#123;</span><br><span class="line">        Arrays.sort(reservedSeats, <span class="keyword">new</span> Comparator&lt;<span class="keyword">int</span>[]&gt;() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span>[] x, <span class="keyword">int</span>[] y)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (x[<span class="number">0</span>] == y[<span class="number">0</span>]) <span class="keyword">return</span> x[<span class="number">1</span>] - y[<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">return</span> x[<span class="number">0</span>] - y[<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">         &#125;);</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">2</span> * n;</span><br><span class="line">        <span class="keyword">int</span> idx = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] seat = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">while</span>(idx&lt;reservedSeats.length) &#123;</span><br><span class="line">            <span class="keyword">int</span> row = reservedSeats[idx][<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">10</span>;k++)&#123;</span><br><span class="line">                seat[k] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span> ((idx&lt;reservedSeats.length) &amp;&amp; (reservedSeats[idx][<span class="number">0</span>] == row)) &#123;</span><br><span class="line">                seat[reservedSeats[idx][<span class="number">1</span>] - <span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">                idx ++;</span><br><span class="line">            &#125;</span><br><span class="line">            ans -= <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">int</span> tag = <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (seat[<span class="number">1</span>] + seat[<span class="number">2</span>] + seat[<span class="number">3</span>] + seat[<span class="number">4</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                tag--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (seat[<span class="number">5</span>] + seat[<span class="number">6</span>] + seat[<span class="number">7</span>] + seat[<span class="number">8</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                tag--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> ((tag ==<span class="number">0</span>) &amp;&amp; (seat[<span class="number">3</span>] + seat[<span class="number">4</span>] + seat[<span class="number">5</span>] + seat[<span class="number">6</span>] ==<span class="number">0</span>)) &#123;</span><br><span class="line">                tag = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ans += tag;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="C-Sort-Integers-by-The-Power-Value"><a href="#C-Sort-Integers-by-The-Power-Value" class="headerlink" title="[C] Sort Integers by The Power Value"></a>[C] Sort Integers by The Power Value</h2><h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>假设一个数，如果是偶数，直接除2，是奇数则乘3再加1；设这个数的值为经过上面两个操作到1的步数。<br>排序给出第k小的数</p>
+<h3 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h3><p>求出1-1000到1的距离，然后排序即可</p>
+<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] fn;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">findn</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> ((x &lt;=<span class="number">1000</span>) &amp;&amp;(<span class="keyword">this</span>.fn[x] != -<span class="number">1</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.fn[x];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> ret;</span><br><span class="line">        <span class="keyword">if</span> (x % <span class="number">2</span> ==<span class="number">0</span>) &#123;</span><br><span class="line">            ret = <span class="keyword">this</span>.findn(x/<span class="number">2</span>)+<span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            ret = <span class="keyword">this</span>.findn(x*<span class="number">3</span>+<span class="number">1</span>) +<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (x&lt;=<span class="number">1000</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.fn[x] = ret;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getKth</span><span class="params">(<span class="keyword">int</span> lo, <span class="keyword">int</span> hi, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.fn = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1001</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> idx=<span class="number">1</span>;idx&lt;=<span class="number">1000</span>;idx++)&#123;</span><br><span class="line">            fn[idx] = -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.fn[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> idx=<span class="number">2</span>;idx&lt;=<span class="number">1000</span>;idx++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.fn[idx] != -<span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">this</span>.findn(idx);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[][] so = <span class="keyword">new</span> <span class="keyword">int</span>[hi-lo+<span class="number">1</span>][<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> idx=lo;idx&lt;=hi;idx++) &#123;</span><br><span class="line">            so[cnt][<span class="number">0</span>] = <span class="keyword">this</span>.fn[idx];</span><br><span class="line">            so[cnt][<span class="number">1</span>] = idx;</span><br><span class="line">            cnt++;</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(so, <span class="keyword">new</span> Comparator&lt;<span class="keyword">int</span>[]&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span>[] o1, <span class="keyword">int</span>[] o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (o1[<span class="number">0</span>] == o2[<span class="number">0</span>]) <span class="keyword">return</span> o1[<span class="number">1</span>] - o2[<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">return</span> o1[<span class="number">0</span>] - o2[<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> so[k-<span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="D-Pizza-With-3n-Slices"><a href="#D-Pizza-With-3n-Slices" class="headerlink" title="[D] Pizza With 3n Slices"></a>[D] Pizza With 3n Slices</h2><h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p>给一个Pizza，每个位置一个值，你每次选其中一个位置后，旁边两个位置被其他人选走，问你最大能选多少。</p>
+<h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><p>DP的思路，假设最后只剩3个选择，那么3个里面选最大的。往前面推，枚举最后3个被选择的位置，求中间GAP中，能够选择的最大值即可。<br>中间的GAP，假设选择(x,y)的最优值，那么枚举中间选择的k，则选择的是Max(slices[k] + (x+1,k-1) + max((k+1,y-1), (k+2,y)))即可</p>
+<h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[][] fn;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] slices;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x&gt;y) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.fn[x][y] != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.fn[x][y];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(y-x+<span class="number">1</span> == <span class="number">3</span>) &#123;</span><br><span class="line">           ret = <span class="keyword">this</span>.slices[(x+<span class="number">1</span>)];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> idx=x+<span class="number">1</span>;idx&lt;y;idx+=<span class="number">3</span>) &#123;</span><br><span class="line">                <span class="keyword">int</span> val = <span class="keyword">this</span>.slices[idx];</span><br><span class="line">                val += <span class="keyword">this</span>.find(x+<span class="number">1</span>,idx-<span class="number">1</span>);</span><br><span class="line">                ret = Math.max(ret, val + <span class="keyword">this</span>.find(idx+<span class="number">2</span>,y));</span><br><span class="line">                ret = Math.max(ret, val + <span class="keyword">this</span>.find(idx+<span class="number">1</span>,y-<span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.fn[x][y] = ret;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSizeSlices</span><span class="params">(<span class="keyword">int</span>[] slices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = slices.length;</span><br><span class="line">        <span class="keyword">this</span>.slices = <span class="keyword">new</span> <span class="keyword">int</span>[n*<span class="number">2</span>];</span><br><span class="line">        System.out.println(n);</span><br><span class="line">        <span class="keyword">this</span>.fn = <span class="keyword">new</span> <span class="keyword">int</span>[n*<span class="number">2</span>+<span class="number">2</span>][n*<span class="number">2</span>+<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>*n;i++) &#123;</span><br><span class="line">            <span class="keyword">this</span>.slices[i] = slices[i%n];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">2</span>*n;j++) &#123;</span><br><span class="line">                <span class="keyword">this</span>.fn[i][j] = -<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> idx = <span class="number">0</span>; idx &lt; n; idx++) &#123;</span><br><span class="line">                <span class="keyword">this</span>.find(idx, idx + n - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> idx=<span class="number">0</span>;idx&lt;n;idx++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> x=idx+<span class="number">1</span>;x&lt;n;x+=<span class="number">3</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> y=x+<span class="number">1</span>;y&lt;n;y+=<span class="number">3</span>) &#123;</span><br><span class="line">                    <span class="keyword">int</span> val = Math.max(slices[idx], Math.max(slices[x], slices[y]));</span><br><span class="line">                    <span class="keyword">if</span> (x-idx-<span class="number">1</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                        val += <span class="keyword">this</span>.fn[idx+<span class="number">1</span>][x-<span class="number">1</span>];</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (y-x-<span class="number">1</span>&gt;<span class="number">0</span>) &#123;</span><br><span class="line">                        val += <span class="keyword">this</span>.fn[x+<span class="number">1</span>][y-<span class="number">1</span>];</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (idx+n-y-<span class="number">1</span>&gt;<span class="number">0</span>) &#123;</span><br><span class="line">                        val += <span class="keyword">this</span>.fn[y+<span class="number">1</span>][idx+n-<span class="number">1</span>];</span><br><span class="line">                    &#125;</span><br><span class="line">                    ans = Math.max(ans, val);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+    
+      <a href="/2020/03/16/2020-03-16-Ranger/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Ranger</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        Bugxyb
+      </li>
+      <li>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+      <aside class="sidebar">
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Tags</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/aboutme/index.html">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/mySetup/index.html">我的配置</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/website/index.html">外链站点</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i></p>
+  <div class="reward-box">
+    
+    
+  </div>
+</div>
+      
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<script src="/js/share.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+    strings: ['技术、学习','话剧、剧集、电影','游戏'],
+    startDelay: 0,
+    typeSpeed: 200,
+    loop: true,
+    backSpeed: 100,
+    showCursor: true
+    });
+  } catch (err) {
+  }
+  
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer:'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    onClick: (e) => {
+      $('.toc-link').removeClass('is-active-link');
+      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
+      $(e.target.hash).scrollIntoView();
+      return false;
+    }
+  });
+</script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+
+<script src="/js/ayer.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  </div>
+</body>
+
+</html>
