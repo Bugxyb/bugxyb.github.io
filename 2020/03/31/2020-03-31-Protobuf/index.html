@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-     Bugxyb 的闲话时间
+    Google Protocol Buffer |  Bugxyb 的闲话时间
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -32,53 +32,17 @@
 <body>
   <div id="app">
     <main class="content">
-      
-<section class="cover">
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">Bugxyb 的闲话时间</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-
-<div id="main">
-  <section class="outer">
-  <article class="articles">
-    
-    
-    
-    
-    <article id="post-2020-03-31-Protobuf" class="article article-type-post" itemscope
+      <section class="outer">
+  <article id="post-2020-03-31-Protobuf" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
     
     <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/31/2020-03-31-Protobuf/"
-    >Google Protocol Buffer</a
-  >
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Google Protocol Buffer
+</h1>
   
 
     </header>
@@ -96,9 +60,36 @@
 
       
       
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">262字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1分钟</span>
+        </span>
+    </span>
+</div>
+
       
     </div>
     
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
 
     
 
@@ -112,9 +103,23 @@
       <h1 id="Google-Protocol-Buffer"><a href="#Google-Protocol-Buffer" class="headerlink" title="Google Protocol Buffer"></a>Google Protocol Buffer</h1><p><a href="https://developers.google.com/protocol-buffers" target="_blank" rel="noopener">Google Protocol Buffer</a>,<br>For Language Guide <a href="https://developers.google.com/protocol-buffers/docs/proto3" target="_blank" rel="noopener">Proto3</a>.</p>
 <p>Google 开源的Protocol Buffer协议，类似Json, XML一样用于数据传输，通过编码进行压缩。<br>支持多个语言使用，包括C++, Go, Java, Python等。</p>
 <p>类似的还有Thrift，直接生成了RPC的模块用于传输</p>
-      
-      <a class="article-more-link" href="/2020/03/31/2020-03-31-Protobuf/">Read More</a>
-      
+<a id="more"></a>
+
+<h2 id="Generated-From-Proto"><a href="#Generated-From-Proto" class="headerlink" title="Generated From Proto"></a>Generated From Proto</h2><h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><p>Builder建造者模式生成的类结构，可以支持多种类型。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># to Java</span></span><br><span class="line">protoc --java_out=<span class="variable">$DST_DIR</span> <span class="variable">$SRC_DIR</span>/*.proto</span><br></pre></td></tr></table></figure>
+
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">syntax&#x3D;&quot;proto3&quot;;</span><br><span class="line"></span><br><span class="line">package sample;</span><br><span class="line"></span><br><span class="line">option java_package&#x3D;&quot;co.hyrule.sample&quot;;</span><br><span class="line">option java_outer_classname&#x3D;&quot;SampleProto&quot;;</span><br><span class="line"></span><br><span class="line">message Sample &#123;</span><br><span class="line">    string name &#x3D; 1;            &#x2F;&#x2F; For String</span><br><span class="line">    int32 id &#x3D; 2;               &#x2F;&#x2F; For Integer</span><br><span class="line"></span><br><span class="line">    enum Gender &#123;               &#x2F;&#x2F; For Enum</span><br><span class="line">        UNKNOWN &#x3D; 0;</span><br><span class="line">        MALE &#x3D; 1;</span><br><span class="line">        FEMALE &#x3D; 2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    message Person &#123;            &#x2F;&#x2F; For Sub Class</span><br><span class="line">        string name &#x3D; 1;</span><br><span class="line">        int32 id &#x3D; 2;</span><br><span class="line">        Gender gender &#x3D; 3;      &#x2F;&#x2F; For Enum</span><br><span class="line">    &#125;</span><br><span class="line">    repeated Person person &#x3D; 3; &#x2F;&#x2F; For List</span><br><span class="line"></span><br><span class="line">    oneof type &#123;</span><br><span class="line">        int32 for1 &#x3D; 10;</span><br><span class="line">        int32 for2 &#x3D; 11;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    map&lt;string, string&gt; val &#x3D; 4; &#x2F;&#x2F; For Map</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="压缩算法解释"><a href="#压缩算法解释" class="headerlink" title="压缩算法解释"></a>压缩算法解释</h2><p>From <a href="https://zhuanlan.zhihu.com/p/73549334" target="_blank" rel="noopener">Zhihu</a></p>
+<h2 id="协议语法解释"><a href="#协议语法解释" class="headerlink" title="协议语法解释"></a>协议语法解释</h2><ul>
+<li>enum：枚举类型</li>
+<li>oneof：唯一选择值</li>
+<li>map：map类型</li>
+<li>repeated：值可以重复，用于生成List类型</li>
+<li>others add so on…</li>
+</ul>
+
       
       <!-- reward -->
       
@@ -132,247 +137,80 @@
   </div>
 
   
-
   
-  
-  
-
-  
-
-</article>
+  <nav class="article-nav">
     
-    <article id="post-2020-03-16-Ranger" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
     
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/16/2020-03-16-Ranger/"
-    >Ranger</a
-  >
-</h2>
+      <a href="/2020/03/16/2020-03-16-Ranger/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Ranger</div>
+      </a>
+    
+  </nav>
+
+
   
 
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/03/16/2020-03-16-Ranger/" class="article-date">
-  <time datetime="2020-03-15T17:12:36.000Z" itemprop="datePublished">2020-03-16</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Tools/">Tools</a>
-  </div>
-
-      
-      
-      
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
     </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <h1 id="聊聊Ranger"><a href="#聊聊Ranger" class="headerlink" title="聊聊Ranger"></a>聊聊Ranger</h1><p><img src="/images/Ranger.png" alt=""></p>
-<ul>
-<li><a href="https://ranger.github.io" target="_blank" rel="noopener">Ranger/Ranger</a></li>
-<li>Video For Ranger<ul>
-<li><a href="https://www.bilibili.com/video/av64990176" target="_blank" rel="noopener">视频1</a></li>
-<li><a href="https://www.bilibili.com/video/av54841601" target="_blank" rel="noopener">视频2</a></li>
-</ul>
-</li>
-<li>My Setup For <a href="https://github.com/Bugxyb/MySetup/tree/master/ranger" target="_blank" rel="noopener">Ranger</a></li>
-<li>All Contents From <a href="https://github.com/ranger/ranger/wiki" target="_blank" rel="noopener">Wiki</a>
-      
-      <a class="article-more-link" href="/2020/03/16/2020-03-16-Ranger/">Read More</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Setup/" rel="tag">Setup</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-2020-03-15-DspBaseThinking" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/15/2020-03-15-DspBaseThinking/"
-    >DspBaseThinking</a
-  >
-</h2>
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/03/15/2020-03-15-DspBaseThinking/" class="article-date">
-  <time datetime="2020-03-14T17:16:55.000Z" itemprop="datePublished">2020-03-15</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Thinking/">Thinking</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <h1 id="DSP的思考——流程和评估"><a href="#DSP的思考——流程和评估" class="headerlink" title="DSP的思考——流程和评估"></a>DSP的思考——流程和评估</h1><p>大概做了这么久相关程序化交易和DSP的平台，大概摸清了其流程，从而可以根据流程来进行处理和优化。<br><strong>在程序化交易的大流量时代，出现交易的不对称情况，即CPI和CPM购入的不一致性。</strong><br>流量端基本以CPM（展示计费）的方式进行出售，而广告主端只想通过CPI（安装或者后续计费）来进行结算。<br>所以CPM-CPI的转换结算出现，即DSP平台的。通过CPM来购买流量，同时以CPI的方式来与广告主端结算。这也是程序化交易中最难的一块。</p>
-      
-      <a class="article-more-link" href="/2020/03/15/2020-03-15-DspBaseThinking/">Read More</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RTB/" rel="tag">RTB</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-2020-02-22-JaveArray" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/02/22/2020-02-22-JaveArray/"
-    >JavaArray</a
-  >
-</h2>
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/02/22/2020-02-22-JaveArray/" class="article-date">
-  <time datetime="2020-02-22T15:42:53.000Z" itemprop="datePublished">2020-02-22</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Technology/">Technology</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <h1 id="JAVA-Arrays"><a href="#JAVA-Arrays" class="headerlink" title="JAVA Arrays"></a>JAVA Arrays</h1><p>记录一些常用的JAVA数组处理，用于基础功能的复习</p>
-      
-      <a class="article-more-link" href="/2020/02/22/2020-02-22-JaveArray/">Read More</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-  </article>
-  
-
-  
-</section>
 </div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
 
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
       <footer class="footer">
   <div class="outer">
     <ul class="list-inline">
@@ -506,6 +344,30 @@
 </script>
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer:'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    onClick: (e) => {
+      $('.toc-link').removeClass('is-active-link');
+      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
+      $(e.target.hash).scrollIntoView();
+      return false;
+    }
+  });
+</script>
 
 
 <script>
